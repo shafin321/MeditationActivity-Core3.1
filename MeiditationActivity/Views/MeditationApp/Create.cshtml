@@ -1,0 +1,282 @@
+﻿@model MeiditationActivity.ViewModels.CreateRangeViewModel
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<style>
+    input[type=range] {
+        -webkit-appearance: none;
+        background: none;
+    }
+
+        input[type=range]::-webkit-slider-runnable-track {
+            height: 5px;
+            background: #ddd;
+            border: none;
+            border-radius: 3px;
+        }
+
+        input[type=range]::-ms-track {
+            height: 5px;
+            background: #ddd;
+            border: none;
+            border-radius: 3px;
+        }
+
+        input[type=range]::-moz-progress-bar {
+            height: 5px;
+            background: #ddd;
+            border: none;
+            border-radius: 3px;
+        }
+
+        input[type=range]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            border: none;
+            height: 16px;
+            width: 16px;
+            border-radius: 50%;
+            background: #555;
+            margin-top: -5px;
+            position: relative;
+        }
+
+        input[type=range]::-ms-thumb {
+            -webkit-appearance: none;
+            border: none;
+            height: 16px;
+            width: 16px;
+            border-radius: 50%;
+            background: #555;
+            margin-top: -5px;
+            position: relative;
+        }
+
+        input[type=range]::-moz-focus-inner {
+            -webkit-appearance: none;
+            border: none;
+            height: 16px;
+            width: 16px;
+            border-radius: 50%;
+            background: #555;
+            margin-top: -5px;
+            position: relative;
+        }
+
+        input[type=range]:focus {
+            outline: none;
+        }
+
+            input[type=range]:focus::-webkit-slider-thumb:after {
+                position: absolute;
+                top: -35px;
+                left: 50%;
+                -webkit-transform: translateX(-50%);
+                transform: translateX(-50%);
+                background: #eee;
+                border-radius: 5px;
+                color: #555;
+                padding: 5px 10px;
+                border: 2px solid #555;
+            }
+
+            input[type=range]:focus::-ms-thumb:after {
+                position: absolute;
+                top: -35px;
+                left: 50%;
+                transform: translateX(-50%);
+                background: #eee;
+                border-radius: 5px;
+                color: #555;
+                padding: 5px 10px;
+                border: 2px solid #555;
+            }
+
+            input[type=range]:focus:: track.range-slider {
+                position: absolute;
+                top: -35px;
+                left: 50%;
+                transform: translateX(-50%);
+                background: #eee;
+                border-radius: 5px;
+                color: #555;
+                padding: 5px 10px;
+                border: 2px solid #555;
+            }
+
+            input[type=range]:focus::-webkit-slider-runnable-track {
+                background: #ccc;
+            }
+
+            input[type=range]:focus::-ms-track {
+                background: #ccc;
+            }
+</style>
+
+
+
+
+
+
+
+
+
+<form asp-controller="MeditationApp" asp-action="Create" method="post">
+
+
+
+    <div class="form-group row">
+        <div class="col-sm-4">
+
+            <div class="range-slider" style="    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    justify-content: space-between;
+    height: 50px;">
+                <label asp-for="PhysicalLoad ">Physical Load </label>
+                <div style="display:flex">
+                    <input asp-for="PhysicalLoad " class="range-slider__range" type="range" value="0" min="0" max="10" style="flex-grow: 1;">
+                    <span class="range-slider__value" style="flex-basis:15px; text-align:center">0</span>
+                </div>
+                <div style="display: flex;
+    justify-content: space-between;">
+                    <span>Easy</span>
+                    <span>Medium</span>
+                    <span>Hard</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+
+    <div class="form-group row">
+        <div class="col-sm-4">
+
+            <div class="range-slider" style="    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    justify-content: space-between;
+    height: 50px;">
+
+
+                <label asp-for="SleepQuality ">Sleeping Quality </label>
+                <div style="display:flex">
+                    <input asp-for="SleepQuality " class="range-slider__range" type="range" value="0" min="0" max="10" style="flex-grow: 1;">
+                    <span class="range-slider__value" style="flex-basis:15px; text-align:center">0</span>
+                </div>
+                <div style="display: flex;
+    justify-content: space-between;">
+                    <span>😐</span>
+                    <span>🙂</span>
+                    <span>😄</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+
+
+
+    <div class="form-group row">
+        <div class="col-sm-4">
+
+            <div class="range-slider" style="    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    justify-content: space-between;
+    height: 50px;">
+                <label asp-for="MentalStausRate ">Mental StatusRate</label>
+                <div style="display:flex">
+                    <input asp-for="MentalStausRate " class="range-slider__range" type="range" value="0" min="0" max="10" style="flex-grow: 1;">
+                    <span class="range-slider__value" style="flex-basis:15px; text-align:center">0</span>
+                </div>
+                <div style="display: flex;
+    justify-content: space-between;">
+                    <span>Bad</span>
+                    <span>Good</span>
+                    <span>Awesome!</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+
+
+
+    <div class="form-group row">
+        <div class="col-sm-4">
+
+            <div class="range-slider" style="    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    justify-content: space-between;
+    height: 50px;">
+                <label asp-for="PhysicalStatusRate ">Physical Status Rate </label>
+                <div style="display:flex">
+                    <input asp-for="PhysicalStatusRate " class="range-slider__range" type="range" value="0" min="0" max="10" style="flex-grow: 1;">
+                    <span class="range-slider__value" style="flex-basis:15px; text-align:center">0</span>
+                </div>
+                <div style="display: flex;
+    justify-content: space-between;">
+                    <span>Easy</span>
+                    <span>Medium</span>
+                    <span>Hard</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+
+    <div class="form-group row">
+        <div class="col-sm-4">
+
+            <div class="range-slider" style="    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    justify-content: space-between;
+    height: 50px;">
+                <label asp-for="sleepingHour ">Sleeping Hour </label>
+                <div style="display:flex">
+                    <input asp-for="sleepingHour " class="range-slider__range" type="range" value="0" min="0" max="8" style="flex-grow: 1;">
+                    <span class="range-slider__value" style="flex-basis:15px; text-align:center">0</span>
+                </div>
+                <div style="display: flex;
+    justify-content: space-between;">
+                    <span>1h-4h</span>
+                    <span>1h-6h</span>
+                    <span>1h-8h</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+
+    <button type="submit" class="btn btn-primary">submit</button>
+</form>
+
+<script>
+    var rangeSlider = function () {
+        var slider = $('.range-slider'),
+            range = $('.range-slider__range'),
+            value = $('.range-slider__value');
+        slider.each(function () {
+            value.each(function () {
+                var value = $(this).prev().attr('value');
+                $(this).html(value);
+            });
+            range.on('input', function () {
+                //alert(this.value);
+                $(this).next(value).html(this.value);
+                $(this).attr('value', this.value);
+            });
+        });
+    };
+    rangeSlider()
+</script>
