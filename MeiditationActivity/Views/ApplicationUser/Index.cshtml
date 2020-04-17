@@ -16,7 +16,7 @@
 
             {
                 <tr>
-                    <td>@user.UserName</td>
+                    <td> <a asp-action="Detail" asp-controller="ApplicationUser" asp-route-id="@user.Id"> @user.UserName></a></td>
 
                     <td>@user.MemberSince</td>
                 </tr>

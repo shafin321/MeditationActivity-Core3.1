@@ -3,7 +3,8 @@
     ViewData["Title"] = "Create";
 }
 
-<h1>Create</h1>
+<div><h1 class="font-weight-lighter  text-blue col-6">Meditation Activity </h1></div>
+
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
@@ -15,19 +16,52 @@
         background: none;
     }
 
-        input[type=range]::-webkit-slider-runnable-track {
-            height: 5px;
-            background: #ddd;
-            border: none;
-            border-radius: 3px;
-        }
+    .bg-blue {
+        background-color: #282D64;
+    }
 
-        input[type=range]::-ms-track {
-            height: 5px;
-            background: #ddd;
-            border: none;
-            border-radius: 3px;
-        }
+
+    .text-primary {
+        color: #007bff !important;
+    }
+
+    .text-blue {
+        color: #282D64 !important;
+        
+    }
+
+    
+
+
+
+    .btn {
+        background-color: #282D64; /* Green */
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+    }
+
+
+
+    input[type=range]::-webkit-slider-runnable-track {
+        height: 5px;
+        background: #ddd;
+        border: none;
+        border-radius: 3px;
+    }
+
+    input[type=range]::-ms-track {
+        height: 5px;
+        background: #ddd;
+        border: none;
+        border-radius: 3px;
+    }
 
         input[type=range]::-moz-progress-bar {
             height: 5px;
@@ -125,158 +159,168 @@
 
 
 
+<div class="container  bg-blue py-5">
+    <div class="row justify-content-center">
 
 
-<form asp-controller="MeditationApp" asp-action="Create" method="post">
+        <div class="col-6 " style="background-color:white">
+            <form class="py-3" asp-controller="MeditationApp" asp-action="Create" method="post">
 
 
 
-    <div class="form-group row">
-        <div class="col-sm-4">
+                <div class="form-group row  ">
+                    <div class="col-sm-12  ">
 
-            <div class="range-slider" style="    display: flex;
+                        <div class="range-slider" style="    display: flex;
     flex-direction: column;
-    max-width: 400px;
+
     justify-content: space-between;
     height: 50px;">
-                <label asp-for="PhysicalLoad ">Physical Load </label>
-                <div style="display:flex">
-                    <input asp-for="PhysicalLoad " class="range-slider__range" type="range" value="0" min="0" max="10" style="flex-grow: 1;">
-                    <span class="range-slider__value" style="flex-basis:15px; text-align:center">0</span>
-                </div>
-                <div style="display: flex;
+                            <label class="text-info"   asp-for="PhysicalLoad "  >Physical Load </label>
+                            <div style="display:flex">
+                                <input asp-for="PhysicalLoad " class="range-slider__range text-primary" type="range" value="0" min="0" max="10" style="flex-grow: 1;">
+                                <span class="range-slider__value" style="flex-basis:15px; text-align:center">0</span>
+                            </div>
+                            <div style="display: flex;
     justify-content: space-between;">
-                    <span>Easy</span>
-                    <span>Medium</span>
-                    <span>Hard</span>
+                                <span>Easy</span>
+                                <span>Medium</span>
+                                <span>Hard</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-    </div>
-    <br>
+                <br>
 
-    <div class="form-group row">
-        <div class="col-sm-4">
+                <div class="form-group row  ">
+                    <div class="col-sm-12 text-blue">
 
-            <div class="range-slider" style="    display: flex;
+                        <div class="range-slider" style="    display: flex;
     flex-direction: column;
-    max-width: 400px;
+
     justify-content: space-between;
     height: 50px;">
 
 
-                <label asp-for="SleepQuality ">Sleeping Quality </label>
-                <div style="display:flex">
-                    <input asp-for="SleepQuality " class="range-slider__range" type="range" value="0" min="0" max="10" style="flex-grow: 1;">
-                    <span class="range-slider__value" style="flex-basis:15px; text-align:center">0</span>
-                </div>
-                <div style="display: flex;
+                            <label class="text-info">Sleep Quality </label>
+                            <div style="display:flex">
+                                <input asp-for="SleepQuality " class="range-slider__range  " type="range" value="0" min="0" max="10" style="flex-grow: 1;">
+                                <span class="range-slider__value" style="flex-basis:15px; text-align:center">0</span>
+                            </div>
+                            <div style="display: flex;
     justify-content: space-between;">
-                    <span>😐</span>
-                    <span>🙂</span>
-                    <span>😄</span>
+                                <span>😐</span>
+                                <span>🙂</span>
+                                <span>😄</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-    </div>
-    <br>
+                <br>
 
 
 
-    <div class="form-group row">
-        <div class="col-sm-4">
+                <div class="form-group row">
+                    <div class="col-sm-12">
 
-            <div class="range-slider" style="    display: flex;
+                        <div class="range-slider" style="    display: flex;
     flex-direction: column;
-    max-width: 400px;
+
     justify-content: space-between;
     height: 50px;">
-                <label asp-for="MentalStausRate ">Mental StatusRate</label>
-                <div style="display:flex">
-                    <input asp-for="MentalStausRate " class="range-slider__range" type="range" value="0" min="0" max="10" style="flex-grow: 1;">
-                    <span class="range-slider__value" style="flex-basis:15px; text-align:center">0</span>
-                </div>
-                <div style="display: flex;
+                            <label class="text-info" asp-for="MentalStausRate ">Mental Status</label>
+                            <div style="display:flex">
+                                <input asp-for="MentalStausRate " class="range-slider__range" type="range" value="0" min="0" max="10" style="flex-grow: 1;">
+                                <span class="range-slider__value" style="flex-basis:15px; text-align:center">0</span>
+                            </div>
+                            <div style="display: flex;
     justify-content: space-between;">
-                    <span>Bad</span>
-                    <span>Good</span>
-                    <span>Awesome!</span>
+                                <span>Bad</span>
+                                <span>Good</span>
+                                <span>Awesome!</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-    </div>
-    <br>
+                <br>
 
 
 
-    <div class="form-group row">
-        <div class="col-sm-4">
+                <div class="form-group row">
+                    <div class="col-sm-12">
 
-            <div class="range-slider" style="    display: flex;
+                        <div class="range-slider" style="    display: flex;
     flex-direction: column;
-    max-width: 400px;
+
     justify-content: space-between;
     height: 50px;">
-                <label asp-for="PhysicalStatusRate ">Physical Status Rate </label>
-                <div style="display:flex">
-                    <input asp-for="PhysicalStatusRate " class="range-slider__range" type="range" value="0" min="0" max="10" style="flex-grow: 1;">
-                    <span class="range-slider__value" style="flex-basis:15px; text-align:center">0</span>
-                </div>
-                <div style="display: flex;
+                            <label class="text-info" asp-for="PhysicalStatusRate ">Physical Status  </label>
+                            <div style="display:flex">
+                                <input asp-for="PhysicalStatusRate " class="range-slider__range" type="range" value="0" min="0" max="10" style="flex-grow: 1;">
+                                <span class="range-slider__value" style="flex-basis:15px; text-align:center">0</span>
+                            </div>
+                            <div style="display: flex;
     justify-content: space-between;">
-                    <span>Easy</span>
-                    <span>Medium</span>
-                    <span>Hard</span>
+                                <span>Easy</span>
+                                <span>Medium</span>
+                                <span>Hard</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-    </div>
-    <br>
+                <br>
 
-    <div class="form-group row">
-        <div class="col-sm-4">
+                <div class="form-group row">
+                    <div class="col-sm-12">
 
-            <div class="range-slider" style="    display: flex;
+                        <div class="range-slider" style="    display: flex;
     flex-direction: column;
-    max-width: 400px;
+
     justify-content: space-between;
     height: 50px;">
-                <label asp-for="sleepingHour ">Sleeping Hour </label>
-                <div style="display:flex">
-                    <input asp-for="sleepingHour " class="range-slider__range" type="range" value="0" min="0" max="8" style="flex-grow: 1;">
-                    <span class="range-slider__value" style="flex-basis:15px; text-align:center">0</span>
-                </div>
-                <div style="display: flex;
+                            <label class="text-info" asp-for="sleepingHour ">Sleep Hours </label>
+                            <div style="display:flex">
+                                <input asp-for="sleepingHour " class="range-slider__range" type="range" value="0" min="1" max="12" style="flex-grow: 1;">
+                                <span class="range-slider__value" style="flex-basis:15px; text-align:center">0</span>
+                            </div>
+                            <div style="display: flex;
     justify-content: space-between;">
-                    <span>1h-4h</span>
-                    <span>1h-6h</span>
-                    <span>1h-8h</span>
+                                <span>1h</span>
+                                <span></span>
+                                <span>12h</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
+                <br>
+                <br>
+
+                <button  type="submit" class="btn btn-blue ">submit</button>
+            </form>
+
+            <script>
+                var rangeSlider = function () {
+                    var slider = $('.range-slider'),
+                        range = $('.range-slider__range'),
+                        value = $('.range-slider__value');
+                    slider.each(function () {
+                        value.each(function () {
+                            var value = $(this).prev().attr('value');
+                            $(this).html(value);
+                        });
+                        range.on('input', function () {
+                            //alert(this.value);
+                            $(this).next(value).html(this.value);
+                            $(this).attr('value', this.value);
+                        });
+                    });
+                };
+                rangeSlider()
+            </script>
+
+
         </div>
+
     </div>
-    <br>
-    <br>
 
-    <button type="submit" class="btn btn-primary">submit</button>
-</form>
-
-<script>
-    var rangeSlider = function () {
-        var slider = $('.range-slider'),
-            range = $('.range-slider__range'),
-            value = $('.range-slider__value');
-        slider.each(function () {
-            value.each(function () {
-                var value = $(this).prev().attr('value');
-                $(this).html(value);
-            });
-            range.on('input', function () {
-                //alert(this.value);
-                $(this).next(value).html(this.value);
-                $(this).attr('value', this.value);
-            });
-        });
-    };
-    rangeSlider()
-</script>
+   

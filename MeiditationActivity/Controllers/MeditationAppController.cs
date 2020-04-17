@@ -8,6 +8,7 @@ using MeiditationActivity.ViewModels;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace MeiditationActivity.Controllers
 {
@@ -91,7 +92,7 @@ namespace MeiditationActivity.Controllers
 		public IActionResult GetAll()
 
 		{
-			return Json(new { data = _context.RangeMeters });
+			return Json(new { data = _context.RangeMeters }) ;
 		}
 
 

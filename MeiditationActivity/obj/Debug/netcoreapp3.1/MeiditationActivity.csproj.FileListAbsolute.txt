@@ -157,3 +157,6 @@ C:\Users\Shujaul\source\repos\MeiditationActivity\MeiditationActivity\obj\Debug\
 C:\Users\Shujaul\source\repos\MeiditationActivity\MeiditationActivity\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.Google.dll
 C:\Users\Shujaul\source\repos\MeiditationActivity\MeiditationActivity\obj\Debug\netcoreapp3.1\MeiditationActivity.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\Shujaul\source\repos\MeiditationActivity\MeiditationActivity\obj\Debug\netcoreapp3.1\MeiditationActivity.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Shujaul\source\repos\MeiditationActivity\MeiditationActivity\obj\Debug\netcoreapp3.1\MeiditationActivity.csproj.CoreCompileInputs.cache
+C:\Users\Shujaul\source\repos\MeiditationActivity\MeiditationActivity\obj\Debug\netcoreapp3.1\MeiditationActivity.genruntimeconfig.cache
+C:\Users\Shujaul\source\repos\MeiditationActivity\MeiditationActivity\obj\Debug\netcoreapp3.1\Razor\Views\ApplicationUser\Detail.cshtml.g.cs

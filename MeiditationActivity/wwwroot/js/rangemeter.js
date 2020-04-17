@@ -22,6 +22,8 @@ function loadDataTable() {
             { "data": "mentalStausRate", "width": "20%" },
             { "data": "sleepQuality", "width": "20%" },
             { "data": "physicalStatusRate", "width": "20%" }
+           
+            
 
 
         ],
